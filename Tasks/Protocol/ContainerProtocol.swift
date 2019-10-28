@@ -9,11 +9,13 @@
 import Foundation
 
 protocol Container {
-	associatedtype Item
-	
-	var count : Int {get}
-	
-	mutating func appendElement(_ element: Item)
-	
-	subscript(i: Int) -> Item {get}
+    
+    associatedtype T
+    
+    var size: Int { get }
+    
+    mutating func addElement (element: T)
+    
+    func atIndex(index: Int) -> T?
 }
+
