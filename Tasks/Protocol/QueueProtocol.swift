@@ -16,19 +16,11 @@ struct Queue<T>: Container {
         return container.count
     }
     
-    mutating func addElement(element: T) {
-        container.append(element)
+    mutating func addElement(value: T) {
+        container.append(value)
     }
     
-    func atIndex(index: Int) -> T? {
-        
-        guard index >= 0, index < size else { return nil }
-        var i = 0
-        var newContainer = container
-        while i != index {
-            newContainer.remove(at: 0)
-            i += 1
-        }
-        return newContainer[0]
+    subscript(index: Int) -> T? {
+        return container[index]
     }
 }

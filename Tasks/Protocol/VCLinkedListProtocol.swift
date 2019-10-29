@@ -20,21 +20,18 @@ class VCLinkedListProtocol: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        list.addElement(element: "111")
-        list.addElement(element: "3223")
-        print(list.size)
         
     }
     
     @IBAction func addElement(_ sender: UIButton) {
         guard let element = newElement.text else { return }
-        list.addElement(element: element)
+        list.addElement(value: element)
         newElement.text = nil
     }
     
     @IBAction func printElement(_ sender: UIButton) {
         guard let text = numberOfElement.text, let number = (Int(text) ?? nil) else { return }
-        let element = list.atIndex(index: number)
+        let element = list[number]
         elementByNumber.text = String(element ?? "")
     }
     @IBAction func printCount(_ sender: UIButton) {

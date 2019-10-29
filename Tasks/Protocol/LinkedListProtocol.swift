@@ -1,59 +1,67 @@
 //
-//  LinkedList.swift
+//  LinkedListProtocol.swift
 //  Tasks
 //
-//  Created by Vova SKR on 28/10/2019.
+//  Created by Vova SKR on 30/10/2019.
 //  Copyright © 2019 Viter. All rights reserved.
 //
 
 import UIKit
 
-struct LinkedListProtocol<T>: Container {
+final class Node<T> {
     
+    let value: T
+    var nextNode: Node?
     
-    indirect enum Node<T> {
-        case value(element: T, next: Node<T> )
-        case end
+    init(value: T, nextNode: Node? = nil) {
+        self.value = value
+        self.nextNode = nextNode
     }
+}
+
+final class LinkedListProtocol<T>: Container {
     
     var head: Node<T>?
+    
+    init(head: Node<T>? = nil) {
+        self.head = head
+    }
     
     var size: Int {
         return self.map {$0}.count
     }
     
-    mutating func addElement(element: T) {
-        var newNode = Node<T>.end
-        newNode = Node<T>.value(element: element, next: newNode)
-        for item in self {
-            newNode = Node.value(element: item, next: newNode)
-        }
-        self.head = newNode
+    func addElement(value: T) {
+        let newNode = Node(value: value, nextNode: nil)
+        guard var head = head else { self.head = newNode; return }
+        while let next = head.nextNode { head = next }
+        head.nextNode = newNode
     }
     
-    
-    func atIndex(index: Int) -> T? {
-        guard index >= 0, index < size else { return nil }
+    subscript(index: Int) -> T? {
         return self.map {$0}[index]
-    }
-    
-    
-    struct Iterator<T>: IteratorProtocol {
-        var current: Node<T>
-        
-        mutating func next() -> T? {
-            switch current {
-            case let .value(element, next):
-                current = next
-                return element
-            case .end: return nil
-            }
-        }
     }
 }
 
+ // MARK: Extension
+
 extension LinkedListProtocol: Sequence {
-    public func makeIterator() -> Iterator<T> {
-        return Iterator(current: head ?? Node.end)
+    func makeIterator() -> Iterator<T> {
+        return Iterator(current: head)
+    }
+}
+
+ // MARK: Iteratoe
+
+struct Iterator<T>: IteratorProtocol {
+    typealias Element = T
+    
+    var current: Node<T>?
+    
+    mutating func next() -> Iterator<T>.Element? {
+        guard let current = current else { return nil }
+        let value = current.value
+        self.current = current.nextNode
+        return value
     }
 }
