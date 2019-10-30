@@ -22,7 +22,7 @@ public struct LinkedList<T>: Sequence {
     }
     
     var count: Int {
-        return self.map {$0}.count
+        return self.map { $0 }.count
     }
     
     mutating func append(elements: LinkedList<T>) {
@@ -62,6 +62,31 @@ public struct LinkedList<T>: Sequence {
         return self.map { $0 }[index]
     }
     
+    func getPreviousNode(with index: Int) -> (Node<T>)? {
+        if index == 0 { return nil }
+        let flatList = getFlatList
+        return index < flatList.count ? flatList[index - 1] : nil
+    }
+    
+    func getNextNode(with index: Int) -> (Node<T>)? {
+        let flatList = getFlatList
+        return index + 1 < flatList.count ? flatList[index + 1] : nil
+    }
+    
+    var getFlatList: [Node<T>] {
+        guard head != nil else { return [] }
+        
+        var tempContainer = [Node<T>]()
+        var current = Node<T>.end
+        
+        for element in self.reversed() {
+            current = Node.node(value: element, next: Node.end)
+            tempContainer.append(current)
+        }
+
+        return tempContainer.reversed()
+    }
+    
     mutating func insert(elements: LinkedList<T>, at index: Int) {
         guard index < count else { return }
         
@@ -91,6 +116,9 @@ public struct LinkedList<T>: Sequence {
         self.head = current
     }
     
+    subscript(_ index: Int) -> T? {
+        return getValue(at: index)
+    }
     
     // MARK: - Sequence protocol supporting
     

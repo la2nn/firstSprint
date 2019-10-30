@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0139D184236900570067E421 /* ArrowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0139D183236900570067E421 /* ArrowsView.swift */; };
+		014BB711236784CB00236AE5 /* LinkedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014BB710236784CB00236AE5 /* LinkedListViewController.swift */; };
+		019534912368547100EEFDE6 /* NodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019534902368547100EEFDE6 /* NodeCell.swift */; };
+		019534932368697D00EEFDE6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019534922368697D00EEFDE6 /* Extensions.swift */; };
 		0198DA8D2364FBEB00FC7FD5 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0198DA8C2364FBEB00FC7FD5 /* LinkedList.swift */; };
-		A7826D122363273200204DDD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7826D112363273200204DDD /* ListViewController.swift */; };
 		A7826D16236329EB00204DDD /* ProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7826D15236329EB00204DDD /* ProtocolViewController.swift */; };
 		A7826D1823632A1800204DDD /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7826D1723632A1800204DDD /* ContainerProtocol.swift */; };
 		A7D3B7F723631C8100B00DA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D3B7F623631C8100B00DA0 /* AppDelegate.swift */; };
@@ -20,8 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0139D183236900570067E421 /* ArrowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowsView.swift; sourceTree = "<group>"; };
+		014BB710236784CB00236AE5 /* LinkedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListViewController.swift; sourceTree = "<group>"; };
+		019534902368547100EEFDE6 /* NodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeCell.swift; sourceTree = "<group>"; };
+		019534922368697D00EEFDE6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0198DA8C2364FBEB00FC7FD5 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
-		A7826D112363273200204DDD /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		A7826D15236329EB00204DDD /* ProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolViewController.swift; sourceTree = "<group>"; };
 		A7826D1723632A1800204DDD /* ContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProtocol.swift; sourceTree = "<group>"; };
 		A7D3B7F323631C8100B00DA0 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,10 +54,18 @@
 		0198DA8E236513ED00FC7FD5 /* LinkedList */ = {
 			isa = PBXGroup;
 			children = (
-				A7826D112363273200204DDD /* ListViewController.swift */,
-				0198DA8C2364FBEB00FC7FD5 /* LinkedList.swift */,
+				01FD5EBD236A5289005ACA2B /* CollectionViewCell */,
 			);
 			path = LinkedList;
+			sourceTree = "<group>";
+		};
+		01FD5EBD236A5289005ACA2B /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				019534902368547100EEFDE6 /* NodeCell.swift */,
+				0139D183236900570067E421 /* ArrowsView.swift */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 		A7D3B7EA23631C8100B00DA0 = {
@@ -82,7 +96,10 @@
 				A7D3B80423631C8400B00DA0 /* Info.plist */,
 				A7826D15236329EB00204DDD /* ProtocolViewController.swift */,
 				A7826D1723632A1800204DDD /* ContainerProtocol.swift */,
+				019534922368697D00EEFDE6 /* Extensions.swift */,
 				0198DA8E236513ED00FC7FD5 /* LinkedList */,
+				014BB710236784CB00236AE5 /* LinkedListViewController.swift */,
+				0198DA8C2364FBEB00FC7FD5 /* LinkedList.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -158,13 +175,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0139D184236900570067E421 /* ArrowsView.swift in Sources */,
 				0198DA8D2364FBEB00FC7FD5 /* LinkedList.swift in Sources */,
 				A7D3B7FB23631C8100B00DA0 /* SumViewController.swift in Sources */,
 				A7D3B7F723631C8100B00DA0 /* AppDelegate.swift in Sources */,
-				A7826D122363273200204DDD /* ListViewController.swift in Sources */,
 				A7826D1823632A1800204DDD /* ContainerProtocol.swift in Sources */,
+				019534932368697D00EEFDE6 /* Extensions.swift in Sources */,
 				A7826D16236329EB00204DDD /* ProtocolViewController.swift in Sources */,
 				A7D3B7F923631C8100B00DA0 /* SceneDelegate.swift in Sources */,
+				014BB711236784CB00236AE5 /* LinkedListViewController.swift in Sources */,
+				019534912368547100EEFDE6 /* NodeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
