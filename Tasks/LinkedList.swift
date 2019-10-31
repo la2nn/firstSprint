@@ -87,7 +87,7 @@ public struct LinkedList<T>: Sequence {
         return tempContainer.reversed()
     }
     
-    mutating func insert(elements: LinkedList<T>, at index: Int) {
+    mutating func insert(elements: LinkedList<T>, before index: Int) {
         guard index < count else { return }
         
         var current = Node<T>.end
@@ -95,6 +95,28 @@ public struct LinkedList<T>: Sequence {
 
             current = Node.node(value: element, next: current)
             if i == (self.count - 1) - index {
+                for element in elements.reversed() {
+                    current = Node.node(value: element, next: current)
+                }
+            }
+        }
+        
+        self.head = current
+    }
+    
+    mutating func insert(elements: LinkedList<T>, after index: Int) {
+        guard index < count else { return }
+        
+        if index == self.count - 1 {
+            append(elements: elements)
+            return
+        }
+        
+        var current = Node<T>.end
+        for (i, element) in self.reversed().enumerated() {
+
+            current = Node.node(value: element, next: current)
+            if i == (self.count - 2) - index {
                 for element in elements.reversed() {
                     current = Node.node(value: element, next: current)
                 }

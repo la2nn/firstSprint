@@ -11,8 +11,14 @@ import UIKit
 class LinkedListViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var chooseIndexSegmented: UISegmentedControl!
+    @IBOutlet weak var addElementButton: UIButton!
+    @IBOutlet weak var elementField: UITextField!
+    @IBOutlet weak var indexField: UITextField!
     
-    private var linkedList: LinkedList<Int> = [10, 20, 30, 40, 50, 20, 30, 40, 50, 20, 30, 40, 50, 20, 30, 40, 50, 20, 30, 40, 50]
+    private typealias ListType = Int
+    
+    private var linkedList: LinkedList<ListType> = [10, 20, 30, 40, 50, 20, 30, 40, 50, 20, 30, 40, 50, 20, 30, 40, 50, 20, 30, 40, 50]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +27,20 @@ class LinkedListViewController: UIViewController {
         collectionView.showsVerticalScrollIndicator = false
     }
 
+    @IBAction func addElementButtonTapped(_ sender: UIButton) {
+        guard let insertIndex = Int(indexField.text ?? ""),
+              let elementString = elementField.text,
+              let element = ListType(elementString) else { return }
+        
+        if chooseIndexSegmented.selectedSegmentIndex == 0 {
+            linkedList.insert(elements: [element], before: insertIndex)
+        } else {
+            linkedList.insert(elements: [element], after: insertIndex)
+        }
+        
+        collectionView.reloadData()
+    }
+    
     @IBAction func removeHead(_ sender: UIButton) {
         guard linkedList.count != 0 else { sender.shake() ; return }
         collectionView.performBatchUpdates({
