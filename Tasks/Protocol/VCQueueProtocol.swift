@@ -24,15 +24,15 @@ class VCQueueProtocol: UIViewController {
     
     
     @IBAction func addElement(_ sender: UIButton) {
-        guard let element = newElement.text else { return }
+        guard let element = newElement.text, newElement.text != "" else { return }
         queue.addElement(value: element)
         newElement.text = nil
     }
     
     @IBAction func printElement(_ sender: UIButton) {
-        guard let text = numberOfElement.text, let number = (Int(text) ?? nil) else { return }
+        guard let text = numberOfElement.text, let number = Int(text) else { elementByNumber.text = "Ошибка"; return }
         let element = queue[number]
-        elementByNumber.text = String(element ?? "")
+        elementByNumber.text = String(element ?? "Такого элемента нет")
     }
     
     @IBAction func printCounfOfElements(_ sender: UIButton) {

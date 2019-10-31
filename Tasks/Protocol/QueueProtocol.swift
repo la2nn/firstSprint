@@ -21,6 +21,7 @@ struct Queue<T>: Container {
     }
     
     subscript(index: Int) -> T? {
+        guard index >= 0, index < size else { return nil }
         return container[index]
     }
 }

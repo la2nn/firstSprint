@@ -16,5 +16,5 @@ protocol Container {
     
     mutating func addElement (value: Item)
     
-    subscript(index: Int) -> Item? {get}
+    subscript(index: Int) -> Item? { get }
 }

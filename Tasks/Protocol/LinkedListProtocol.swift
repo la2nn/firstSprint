@@ -39,11 +39,12 @@ final class LinkedListProtocol<T>: Container {
     }
     
     subscript(index: Int) -> T? {
+        guard index >= 0, index < size else { return nil }
         return self.map {$0}[index]
     }
 }
 
- // MARK: Extension
+// MARK: Extension
 
 extension LinkedListProtocol: Sequence {
     func makeIterator() -> Iterator<T> {
@@ -51,7 +52,7 @@ extension LinkedListProtocol: Sequence {
     }
 }
 
- // MARK: Iteratoe
+// MARK: Iterator
 
 struct Iterator<T>: IteratorProtocol {
     typealias Element = T
