@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ltj-oS-kcZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,6 +22,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="UZj-oz-OXJ"/>
                         <segue destination="EAr-c5-YcO" kind="relationship" relationship="viewControllers" id="Dba-86-uJE"/>
                         <segue destination="Dnb-PG-wFj" kind="relationship" relationship="viewControllers" id="HJM-io-EW8"/>
+                        <segue destination="Cdh-th-XoD" kind="relationship" relationship="viewControllers" id="tTo-oM-HfG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMa-UF-nrb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -169,18 +171,18 @@
         <!--Protocol-->
         <scene sceneID="qaa-vk-P2q">
             <objects>
-                <viewController id="Dnb-PG-wFj" customClass="ProtocolViewController" customModule="Tasks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dnb-PG-wFj" customClass="VCQueueProtocol" customModule="Tasks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MiY-ll-qXH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Новый элемент" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mkk-J1-nwF">
-                                <rect key="frame" x="122" y="74" width="170" height="34"/>
+                                <rect key="frame" x="122" y="174" width="170" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfX-LM-ww8">
-                                <rect key="frame" x="101" y="133" width="212" height="42"/>
+                                <rect key="frame" x="101" y="233" width="212" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Добавить элемент"/>
                                 <connections>
@@ -188,15 +190,15 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер элемента" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AXZ-sP-3iA">
-                                <rect key="frame" x="35" y="210" width="165" height="34"/>
+                                <rect key="frame" x="35" y="310" width="165" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="165" id="dJ3-H0-chf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3k-Zy-2sT">
-                                <rect key="frame" x="225" y="210" width="129" height="34"/>
+                                <rect key="frame" x="225" y="310" width="129" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="m0d-ZR-LOK"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="utP-KN-y11"/>
@@ -206,7 +208,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjA-9U-reW">
-                                <rect key="frame" x="45.5" y="269" width="323" height="42"/>
+                                <rect key="frame" x="45.5" y="369" width="323" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Вывести значение элемента"/>
                                 <connections>
@@ -214,21 +216,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество элементов" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKQ-9U-MSE">
-                                <rect key="frame" x="76.5" y="346" width="261.5" height="30"/>
+                                <rect key="frame" x="76.5" y="446" width="261.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fT1-43-WUL">
-                                <rect key="frame" x="35.5" y="533" width="343" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="Вывести всю очередь"/>
-                                <connections>
-                                    <action selector="printListOfElements:" destination="Dnb-PG-wFj" eventType="touchUpInside" id="b8D-Dr-HeV"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOC-FH-7Lr">
-                                <rect key="frame" x="61.5" y="401" width="291" height="36"/>
+                                <rect key="frame" x="61.5" y="501" width="291" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Вывести количество элементов"/>
                                 <connections>
@@ -236,7 +230,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Очередь" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ojf-La-QQu">
-                                <rect key="frame" x="147.5" y="472" width="119.5" height="36"/>
+                                <rect key="frame" x="147.5" y="89" width="119.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -245,6 +239,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="g3k-Zy-2sT" firstAttribute="leading" secondItem="AXZ-sP-3iA" secondAttribute="trailing" constant="25" id="1IZ-Ki-WhT"/>
+                            <constraint firstItem="Mkk-J1-nwF" firstAttribute="top" secondItem="Ojf-La-QQu" secondAttribute="bottom" constant="49" id="1lf-w2-vQP"/>
                             <constraint firstItem="gOC-FH-7Lr" firstAttribute="centerX" secondItem="KPQ-aB-E2L" secondAttribute="centerX" id="3IT-TG-rj2"/>
                             <constraint firstItem="Ojf-La-QQu" firstAttribute="centerX" secondItem="KPQ-aB-E2L" secondAttribute="centerX" id="4EF-FB-xT3"/>
                             <constraint firstItem="gOC-FH-7Lr" firstAttribute="top" secondItem="AKQ-9U-MSE" secondAttribute="bottom" constant="25" id="6zE-uM-QzS"/>
@@ -253,17 +248,13 @@
                             <constraint firstItem="AKQ-9U-MSE" firstAttribute="centerX" secondItem="MiY-ll-qXH" secondAttribute="centerX" id="LDk-bQ-v8E"/>
                             <constraint firstItem="kjA-9U-reW" firstAttribute="top" secondItem="g3k-Zy-2sT" secondAttribute="bottom" constant="25" id="LIy-01-JKD"/>
                             <constraint firstItem="AKQ-9U-MSE" firstAttribute="top" secondItem="kjA-9U-reW" secondAttribute="bottom" constant="35" id="Myt-Tc-2bF"/>
-                            <constraint firstItem="Ojf-La-QQu" firstAttribute="top" secondItem="gOC-FH-7Lr" secondAttribute="bottom" constant="35" id="O8a-Ie-9T6"/>
                             <constraint firstItem="Mkk-J1-nwF" firstAttribute="centerX" secondItem="XfX-LM-ww8" secondAttribute="centerX" id="OID-Zu-1hL"/>
                             <constraint firstItem="KPQ-aB-E2L" firstAttribute="trailing" secondItem="g3k-Zy-2sT" secondAttribute="trailing" constant="60" id="R4L-tt-i3q"/>
+                            <constraint firstItem="Ojf-La-QQu" firstAttribute="top" secondItem="KPQ-aB-E2L" secondAttribute="top" constant="45" id="Y2D-GR-4RF"/>
                             <constraint firstItem="kjA-9U-reW" firstAttribute="centerX" secondItem="MiY-ll-qXH" secondAttribute="centerX" id="bpk-Bd-E5a"/>
                             <constraint firstItem="Mkk-J1-nwF" firstAttribute="centerX" secondItem="KPQ-aB-E2L" secondAttribute="centerX" id="g6t-Sh-7Gt"/>
                             <constraint firstItem="g3k-Zy-2sT" firstAttribute="centerY" secondItem="AXZ-sP-3iA" secondAttribute="centerY" id="gmy-rn-Hb8"/>
-                            <constraint firstItem="KPQ-aB-E2L" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fT1-43-WUL" secondAttribute="bottom" constant="35" id="jjm-Bv-qhZ"/>
-                            <constraint firstItem="fT1-43-WUL" firstAttribute="top" secondItem="Ojf-La-QQu" secondAttribute="bottom" constant="25" id="oh0-ht-ZSg"/>
                             <constraint firstItem="g3k-Zy-2sT" firstAttribute="top" secondItem="XfX-LM-ww8" secondAttribute="bottom" constant="35" id="q1l-4b-MIo"/>
-                            <constraint firstItem="fT1-43-WUL" firstAttribute="centerX" secondItem="MiY-ll-qXH" secondAttribute="centerX" id="sEJ-JH-xdW"/>
-                            <constraint firstItem="Mkk-J1-nwF" firstAttribute="top" secondItem="KPQ-aB-E2L" secondAttribute="top" constant="30" id="zC8-yt-ihO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KPQ-aB-E2L"/>
                     </view>
@@ -271,7 +262,6 @@
                     <connections>
                         <outlet property="countOfElements" destination="AKQ-9U-MSE" id="NM1-X9-pIq"/>
                         <outlet property="elementByNumber" destination="g3k-Zy-2sT" id="PeZ-xQ-4l1"/>
-                        <outlet property="listOfElements" destination="Ojf-La-QQu" id="SVj-H1-Ex6"/>
                         <outlet property="newElement" destination="Mkk-J1-nwF" id="oGK-fs-318"/>
                         <outlet property="numberOfElement" destination="AXZ-sP-3iA" id="wVU-fb-oD1"/>
                     </connections>
@@ -279,6 +269,108 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXc-hF-fXS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="195.6521739130435" y="-131.25"/>
+        </scene>
+        <!--Protocol-->
+        <scene sceneID="ICN-Dh-yZ6">
+            <objects>
+                <viewController id="Cdh-th-XoD" customClass="VCLinkedListProtocol" customModule="Tasks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oDP-ih-Svm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Новый элемент" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="962-G7-IN0">
+                                <rect key="frame" x="122" y="174" width="170" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4WH-4K-VSE">
+                                <rect key="frame" x="101" y="233" width="212" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Добавить элемент"/>
+                                <connections>
+                                    <action selector="addElement:" destination="Cdh-th-XoD" eventType="touchUpInside" id="mLb-8V-orq"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер элемента" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="45o-7A-opE">
+                                <rect key="frame" x="35" y="310" width="165" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="fZh-6e-gCf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zM-zA-6zs">
+                                <rect key="frame" x="225" y="310" width="129" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="hvt-fp-6Qq"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="us5-H9-8Z0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhG-qO-vZ5">
+                                <rect key="frame" x="45.5" y="369" width="323" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Вывести значение элемента"/>
+                                <connections>
+                                    <action selector="printElement:" destination="Cdh-th-XoD" eventType="touchUpInside" id="TQy-PZ-HS9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество элементов" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkf-rT-vtH">
+                                <rect key="frame" x="76.5" y="446" width="261.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSZ-m2-UnA">
+                                <rect key="frame" x="61.5" y="501" width="291" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Вывести количество элементов"/>
+                                <connections>
+                                    <action selector="printCount:" destination="Cdh-th-XoD" eventType="touchUpInside" id="tzg-yd-vI1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Связный список" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ce-JV-adt">
+                                <rect key="frame" x="96.5" y="94" width="221" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="962-G7-IN0" firstAttribute="top" secondItem="3ce-JV-adt" secondAttribute="bottom" constant="44" id="0b8-TU-WQ7"/>
+                            <constraint firstItem="962-G7-IN0" firstAttribute="centerX" secondItem="4WH-4K-VSE" secondAttribute="centerX" id="AwA-D1-mpa"/>
+                            <constraint firstItem="4WH-4K-VSE" firstAttribute="top" secondItem="962-G7-IN0" secondAttribute="bottom" constant="25" id="C6V-VJ-gxE"/>
+                            <constraint firstItem="0zM-zA-6zs" firstAttribute="top" secondItem="4WH-4K-VSE" secondAttribute="bottom" constant="35" id="JJj-Wx-c4V"/>
+                            <constraint firstItem="zhG-qO-vZ5" firstAttribute="centerX" secondItem="oDP-ih-Svm" secondAttribute="centerX" id="KDo-NN-rVw"/>
+                            <constraint firstItem="45o-7A-opE" firstAttribute="leading" secondItem="g8J-YV-Kmn" secondAttribute="leading" constant="35" id="L7d-ml-fmc"/>
+                            <constraint firstItem="3ce-JV-adt" firstAttribute="centerX" secondItem="g8J-YV-Kmn" secondAttribute="centerX" id="NfM-Fz-eqy"/>
+                            <constraint firstItem="Qkf-rT-vtH" firstAttribute="centerX" secondItem="oDP-ih-Svm" secondAttribute="centerX" id="PZw-Zc-KxE"/>
+                            <constraint firstItem="3ce-JV-adt" firstAttribute="top" secondItem="g8J-YV-Kmn" secondAttribute="top" constant="50" id="V4T-HN-Pea"/>
+                            <constraint firstItem="962-G7-IN0" firstAttribute="centerX" secondItem="g8J-YV-Kmn" secondAttribute="centerX" id="Yf0-ji-ApA"/>
+                            <constraint firstItem="nSZ-m2-UnA" firstAttribute="centerX" secondItem="g8J-YV-Kmn" secondAttribute="centerX" id="jf4-9x-Yhz"/>
+                            <constraint firstItem="0zM-zA-6zs" firstAttribute="leading" secondItem="45o-7A-opE" secondAttribute="trailing" constant="25" id="kaI-9U-YyQ"/>
+                            <constraint firstItem="g8J-YV-Kmn" firstAttribute="trailing" secondItem="0zM-zA-6zs" secondAttribute="trailing" constant="60" id="qLF-S3-nPN"/>
+                            <constraint firstItem="zhG-qO-vZ5" firstAttribute="top" secondItem="0zM-zA-6zs" secondAttribute="bottom" constant="25" id="seF-Xk-9ph"/>
+                            <constraint firstItem="nSZ-m2-UnA" firstAttribute="top" secondItem="Qkf-rT-vtH" secondAttribute="bottom" constant="25" id="teW-CD-1iD"/>
+                            <constraint firstItem="Qkf-rT-vtH" firstAttribute="top" secondItem="zhG-qO-vZ5" secondAttribute="bottom" constant="35" id="wyv-ZM-GKo"/>
+                            <constraint firstItem="0zM-zA-6zs" firstAttribute="centerY" secondItem="45o-7A-opE" secondAttribute="centerY" id="zIF-jA-eud"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g8J-YV-Kmn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Protocol" image="doc.text" catalog="system" id="l5g-ma-i9C"/>
+                    <connections>
+                        <outlet property="countOfElement" destination="Qkf-rT-vtH" id="3qz-dr-v6n"/>
+                        <outlet property="elementByNumber" destination="0zM-zA-6zs" id="EMo-Mi-eOU"/>
+                        <outlet property="newElement" destination="962-G7-IN0" id="Sb8-wf-fQh"/>
+                        <outlet property="numberOfElement" destination="45o-7A-opE" id="19c-nR-Rqw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZMt-ew-unA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.82608695652186" y="-131.25"/>
         </scene>
     </scenes>
     <resources>

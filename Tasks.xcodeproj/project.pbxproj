@@ -8,22 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		A7826D122363273200204DDD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7826D112363273200204DDD /* ListViewController.swift */; };
-		A7826D142363292200204DDD /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7826D132363292200204DDD /* LinkedList.swift */; };
-		A7826D16236329EB00204DDD /* ProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7826D15236329EB00204DDD /* ProtocolViewController.swift */; };
-		A7826D1823632A1800204DDD /* ContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7826D1723632A1800204DDD /* ContainerProtocol.swift */; };
 		A7D3B7F723631C8100B00DA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D3B7F623631C8100B00DA0 /* AppDelegate.swift */; };
 		A7D3B7F923631C8100B00DA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D3B7F823631C8100B00DA0 /* SceneDelegate.swift */; };
 		A7D3B7FB23631C8100B00DA0 /* SumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D3B7FA23631C8100B00DA0 /* SumViewController.swift */; };
 		A7D3B7FE23631C8100B00DA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D3B7FC23631C8100B00DA0 /* Main.storyboard */; };
 		A7D3B80023631C8400B00DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7D3B7FF23631C8400B00DA0 /* Assets.xcassets */; };
 		A7D3B80323631C8400B00DA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D3B80123631C8400B00DA0 /* LaunchScreen.storyboard */; };
+		F16D4A1123673E7C0065885D /* QueueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16D4A1023673E7C0065885D /* QueueProtocol.swift */; };
+		F16D4A1A236742400065885D /* VCLinkedListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16D4A19236742400065885D /* VCLinkedListProtocol.swift */; };
+		F1AC7DCD2368CC86001AB9BA /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC7DCC2368CC86001AB9BA /* Protocol.swift */; };
+		F1AC7DCF2368CCCD001AB9BA /* VCQueueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AC7DCE2368CCCD001AB9BA /* VCQueueProtocol.swift */; };
+		F1B115AF2368E24200620115 /* LinkedListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B115AE2368E24200620115 /* LinkedListProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A7826D112363273200204DDD /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		A7826D132363292200204DDD /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
-		A7826D15236329EB00204DDD /* ProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolViewController.swift; sourceTree = "<group>"; };
-		A7826D1723632A1800204DDD /* ContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProtocol.swift; sourceTree = "<group>"; };
 		A7D3B7F323631C8100B00DA0 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D3B7F623631C8100B00DA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7D3B7F823631C8100B00DA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +31,11 @@
 		A7D3B7FF23631C8400B00DA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7D3B80223631C8400B00DA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7D3B80423631C8400B00DA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F16D4A1023673E7C0065885D /* QueueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueProtocol.swift; sourceTree = "<group>"; };
+		F16D4A19236742400065885D /* VCLinkedListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLinkedListProtocol.swift; sourceTree = "<group>"; };
+		F1AC7DCC2368CC86001AB9BA /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		F1AC7DCE2368CCCD001AB9BA /* VCQueueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCQueueProtocol.swift; sourceTree = "<group>"; };
+		F1B115AE2368E24200620115 /* LinkedListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,11 +76,21 @@
 				A7D3B80123631C8400B00DA0 /* LaunchScreen.storyboard */,
 				A7D3B80423631C8400B00DA0 /* Info.plist */,
 				A7826D112363273200204DDD /* ListViewController.swift */,
-				A7826D132363292200204DDD /* LinkedList.swift */,
-				A7826D15236329EB00204DDD /* ProtocolViewController.swift */,
-				A7826D1723632A1800204DDD /* ContainerProtocol.swift */,
+				F16D4A0D23673C7F0065885D /* Protocol */,
 			);
 			path = Tasks;
+			sourceTree = "<group>";
+		};
+		F16D4A0D23673C7F0065885D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F1AC7DCE2368CCCD001AB9BA /* VCQueueProtocol.swift */,
+				F16D4A19236742400065885D /* VCLinkedListProtocol.swift */,
+				F1B115AE2368E24200620115 /* LinkedListProtocol.swift */,
+				F16D4A1023673E7C0065885D /* QueueProtocol.swift */,
+				F1AC7DCC2368CC86001AB9BA /* Protocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,6 +125,7 @@
 				TargetAttributes = {
 					A7D3B7F223631C8100B00DA0 = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -150,12 +165,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7826D142363292200204DDD /* LinkedList.swift in Sources */,
+				F1AC7DCF2368CCCD001AB9BA /* VCQueueProtocol.swift in Sources */,
+				F16D4A1123673E7C0065885D /* QueueProtocol.swift in Sources */,
 				A7D3B7FB23631C8100B00DA0 /* SumViewController.swift in Sources */,
+				F16D4A1A236742400065885D /* VCLinkedListProtocol.swift in Sources */,
 				A7D3B7F723631C8100B00DA0 /* AppDelegate.swift in Sources */,
 				A7826D122363273200204DDD /* ListViewController.swift in Sources */,
-				A7826D1823632A1800204DDD /* ContainerProtocol.swift in Sources */,
-				A7826D16236329EB00204DDD /* ProtocolViewController.swift in Sources */,
+				F1B115AF2368E24200620115 /* LinkedListProtocol.swift in Sources */,
+				F1AC7DCD2368CC86001AB9BA /* Protocol.swift in Sources */,
 				A7D3B7F923631C8100B00DA0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +317,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HSXJ839659;
 				INFOPLIST_FILE = Tasks/Info.plist;
@@ -310,6 +328,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Viter.Tasks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -319,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HSXJ839659;
 				INFOPLIST_FILE = Tasks/Info.plist;
