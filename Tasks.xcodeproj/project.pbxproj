@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0116BAB7236CE2700015A9AD /* AllowsGetNumericFromStringProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0116BAB6236CE2700015A9AD /* AllowsGetNumericFromStringProtocol.swift */; };
 		0139D184236900570067E421 /* ArrowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0139D183236900570067E421 /* ArrowsView.swift */; };
+		013B4929236CBC6700A0841F /* StringDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013B4928236CBC6700A0841F /* StringDataSource.swift */; };
+		013B492B236CBC7300A0841F /* NumericDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013B492A236CBC7300A0841F /* NumericDataSource.swift */; };
+		013B492D236CBC8F00A0841F /* LinkedListInsertMethodProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013B492C236CBC8F00A0841F /* LinkedListInsertMethodProtocol.swift */; };
 		014BB711236784CB00236AE5 /* LinkedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014BB710236784CB00236AE5 /* LinkedListViewController.swift */; };
 		019534912368547100EEFDE6 /* NodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019534902368547100EEFDE6 /* NodeCell.swift */; };
 		019534932368697D00EEFDE6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019534922368697D00EEFDE6 /* Extensions.swift */; };
@@ -23,7 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0116BAB6236CE2700015A9AD /* AllowsGetNumericFromStringProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowsGetNumericFromStringProtocol.swift; sourceTree = "<group>"; };
 		0139D183236900570067E421 /* ArrowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowsView.swift; sourceTree = "<group>"; };
+		013B4928236CBC6700A0841F /* StringDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringDataSource.swift; sourceTree = "<group>"; };
+		013B492A236CBC7300A0841F /* NumericDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericDataSource.swift; sourceTree = "<group>"; };
+		013B492C236CBC8F00A0841F /* LinkedListInsertMethodProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListInsertMethodProtocol.swift; sourceTree = "<group>"; };
 		014BB710236784CB00236AE5 /* LinkedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListViewController.swift; sourceTree = "<group>"; };
 		019534902368547100EEFDE6 /* NodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeCell.swift; sourceTree = "<group>"; };
 		019534922368697D00EEFDE6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -51,21 +59,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0116BAB4236CD3920015A9AD /* LinkedListModel */ = {
+			isa = PBXGroup;
+			children = (
+				0116BAB5236CD3BB0015A9AD /* LinkedListDataSource */,
+				0198DA8C2364FBEB00FC7FD5 /* LinkedList.swift */,
+			);
+			path = LinkedListModel;
+			sourceTree = "<group>";
+		};
+		0116BAB5236CD3BB0015A9AD /* LinkedListDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				013B492A236CBC7300A0841F /* NumericDataSource.swift */,
+				013B4928236CBC6700A0841F /* StringDataSource.swift */,
+			);
+			path = LinkedListDataSource;
+			sourceTree = "<group>";
+		};
+		0116BAB8236CE3260015A9AD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0116BAB6236CE2700015A9AD /* AllowsGetNumericFromStringProtocol.swift */,
+				013B492C236CBC8F00A0841F /* LinkedListInsertMethodProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		0198DA8E236513ED00FC7FD5 /* LinkedList */ = {
 			isa = PBXGroup;
 			children = (
-				01FD5EBD236A5289005ACA2B /* CollectionViewCell */,
+				014BB710236784CB00236AE5 /* LinkedListViewController.swift */,
+				01FD5EBD236A5289005ACA2B /* LinkedListCell */,
+				0116BAB4236CD3920015A9AD /* LinkedListModel */,
 			);
 			path = LinkedList;
 			sourceTree = "<group>";
 		};
-		01FD5EBD236A5289005ACA2B /* CollectionViewCell */ = {
+		01FD5EBD236A5289005ACA2B /* LinkedListCell */ = {
 			isa = PBXGroup;
 			children = (
 				019534902368547100EEFDE6 /* NodeCell.swift */,
 				0139D183236900570067E421 /* ArrowsView.swift */,
 			);
-			path = CollectionViewCell;
+			path = LinkedListCell;
 			sourceTree = "<group>";
 		};
 		A7D3B7EA23631C8100B00DA0 = {
@@ -97,9 +134,8 @@
 				A7826D15236329EB00204DDD /* ProtocolViewController.swift */,
 				A7826D1723632A1800204DDD /* ContainerProtocol.swift */,
 				019534922368697D00EEFDE6 /* Extensions.swift */,
+				0116BAB8236CE3260015A9AD /* Protocols */,
 				0198DA8E236513ED00FC7FD5 /* LinkedList */,
-				014BB710236784CB00236AE5 /* LinkedListViewController.swift */,
-				0198DA8C2364FBEB00FC7FD5 /* LinkedList.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -176,13 +212,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0139D184236900570067E421 /* ArrowsView.swift in Sources */,
+				0116BAB7236CE2700015A9AD /* AllowsGetNumericFromStringProtocol.swift in Sources */,
 				0198DA8D2364FBEB00FC7FD5 /* LinkedList.swift in Sources */,
+				013B4929236CBC6700A0841F /* StringDataSource.swift in Sources */,
 				A7D3B7FB23631C8100B00DA0 /* SumViewController.swift in Sources */,
+				013B492B236CBC7300A0841F /* NumericDataSource.swift in Sources */,
 				A7D3B7F723631C8100B00DA0 /* AppDelegate.swift in Sources */,
 				A7826D1823632A1800204DDD /* ContainerProtocol.swift in Sources */,
 				019534932368697D00EEFDE6 /* Extensions.swift in Sources */,
 				A7826D16236329EB00204DDD /* ProtocolViewController.swift in Sources */,
 				A7D3B7F923631C8100B00DA0 /* SceneDelegate.swift in Sources */,
+				013B492D236CBC8F00A0841F /* LinkedListInsertMethodProtocol.swift in Sources */,
 				014BB711236784CB00236AE5 /* LinkedListViewController.swift in Sources */,
 				019534912368547100EEFDE6 /* NodeCell.swift in Sources */,
 			);
@@ -331,7 +371,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HSXJ839659;
 				INFOPLIST_FILE = Tasks/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,7 +379,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Viter.Tasks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -350,7 +390,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HSXJ839659;
 				INFOPLIST_FILE = Tasks/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,7 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Viter.Tasks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

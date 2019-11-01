@@ -32,3 +32,9 @@ extension UIBezierPath {
         self.addLine(to: arrowLine2)
     }
 }
+
+extension Int: AllowsGetNumericFromString { }
+
+extension Double: AllowsGetNumericFromString { }
+
+extension Float: AllowsGetNumericFromString { }

@@ -18,7 +18,7 @@ public struct LinkedList<T>: Sequence {
     var head: Node<T>?
 
     var isEmpty: Bool {
-        return head == nil
+        return count == 0
     }
     
     var count: Int {
